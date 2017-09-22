@@ -1,3 +1,6 @@
+'''
+http://blog.csdn.net/cc_again/article/details/9918313
+'''
 import scipy.special as ss
 import numpy as np
 

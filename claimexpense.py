@@ -1,4 +1,6 @@
-
+'''
+http://acm.hdu.edu.cn/showproblem.php?pid=1864
+'''
 import numpy as np
 import math
 

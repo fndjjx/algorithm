@@ -54,7 +54,7 @@ def solution3(l):
                         tmp.append(dp[int(j-k*l[2][i-1])][p-k]+k*l[1][i-1])
                 dp[j][p] = max(tmp)
     print(dp)
-    return dp[-1]-need
+    return dp[-1][-1]-need
 
 
 if __name__=="__main__":

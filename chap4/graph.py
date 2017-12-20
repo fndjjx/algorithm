@@ -45,13 +45,13 @@ class DFS():
             self._path[i] = start
             self.marked.append(i)
             self._dfs(i, end)
-        print(self._path)
         return self.path(start, end)
 
     def _dfs(self, v, end):
         for i in self.g.adj[v]:
-            self._path[i] = v
+            #self._path[i] = v
             if not i in self.marked:
+                self._path[i] = v
                 self.marked.append(i)
                 self._dfs(i,end)
 
@@ -101,14 +101,15 @@ class BFS():
 if __name__=="__main__":
     l=[[1,3],[0,1],[0,2]]
     l=[[0,1],[0,3],[1,0],[1,3],[1,4],[2,3],[2,4],[3,0],[3,1],[3,2],[3,4],[4,1],[4,2],[4,3]]
+    l=[[0,1],[0,3],[2,3],[2,4]]
     g = Graph(l)
     print(g.E())
     print(g.V())
     print(g)
     d = DFS(g)
-    print(d.dfs(0,2))
+    print(d.dfs(1,4))
     b = BFS(g)
-    print(b.bfs(0,2))
+    print(b.bfs(1,4))
     
         
            
